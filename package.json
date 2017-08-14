@@ -1,0 +1,35 @@
+{
+  "name": "koop-output-wfs",
+  "version": "1.0.0",
+  "description": "Web Feature Services Output plugin for Koop",
+  "main": "dist/index.js",
+  "scripts": {
+    "compile": "rm -rf dist && buble -i src -o dist",
+    "test": "tape test/*.js | tap-spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/koopjs/koop-output-wfs.git"
+  },
+  "keywords": [
+    "koop",
+    "output",
+    "wfs",
+    "gis",
+    "ogc"
+  ],
+  "author": "Daniel Fenton <dfenton@esri.com>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/koopjs/koop-output-wfs/issues"
+  },
+  "homepage": "https://github.com/koopjs/koop-output-wfs#readme",
+  "dependencies": {
+    "winnow": "^1.11.2"
+  },
+  "devDependencies": {
+    "buble": "^0.15.2",
+    "mocha": "^3.5.0",
+    "standard": "^10.0.3"
+  }
+}
