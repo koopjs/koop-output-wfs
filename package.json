@@ -1,6 +1,6 @@
 {
   "name": "koop-output-wfs",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "description": "Web Feature Services Output plugin for Koop",
   "main": "dist/index.js",
   "scripts": {
