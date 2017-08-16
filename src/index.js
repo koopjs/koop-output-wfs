@@ -1,12 +1,12 @@
 const router = require('./router')
 
-class WFS {
-  serveWFS (req, res) {
-    this.model.pull(req, (e, data) => {
-      if (e) res.status(e.code || 500).json({ error: e.message })
-      else router.route(res, res, data)
-    })
-  }
+function WFS () {}
+
+WFS.prototype.serve = function (req, res) {
+  this.model.pull(req, (e, data) => {
+    if (e) res.status(e.code || 500).json({ error: e.message })
+    else router.route(req, res, data)
+  })
 }
 
 WFS.version = require('../package.json').version
@@ -15,7 +15,7 @@ WFS.routes = [
   {
     path: 'wfs',
     methods: ['get', 'post'],
-    handler: 'serveWFS'
+    handler: 'serve'
   }
 ]
 

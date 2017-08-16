@@ -3,6 +3,7 @@ const operations = require('./operations')
 function route (req, res, data) {
   const options = parseOptions(req.query)
   const operation = operations[options.request]
+
   if (!operation) return res.status(400).json({ error: 'Request not supported' })
 
   try {
@@ -13,7 +14,7 @@ function route (req, res, data) {
   }
 }
 
-function parseOptions (query) {
+function parseOptions (query = {}) {
   return Object.keys(query).reduce((options, key) => {
     options[key] = tryParse(query[key])
     return options

@@ -8,5 +8,9 @@
     "start": "node server.js"
   },
   "author": "Daniel Fenton <dfenton@esri.com>",
-  "license": "Apache-2.0"
+  "license": "Apache-2.0",
+  "dependencies": {
+    "@koopjs/provider-google-sheets": "^1.0.0",
+    "koop-provider-craigslist": "^2.0.1"
+  }
 }
